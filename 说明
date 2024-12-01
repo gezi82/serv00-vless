@@ -1,0 +1,8 @@
+先放行一个端口，在cf上域名解析ip，添加域名并选定所开放的端口
+先在index.js里更改放行的端口和uuid后，再上传至所添加的域名处，全部解压至域名处，解压后把域名下不需要的全部删除，不要留文件夹，也可把 index.js package.json 和 start.sh 这三个文件一个一个上传至域名处
+
+运行命令： cd domains/你的域名 && npm install ws && screen node index.js
+
+下次恢复运行或添加保活命令: cd domains/你的域名 && screen node index.js
+
+运行后会生成两个节点信息，全部复制导入，路径处填 /xx 再打开cf的小云朵套cdn才能优选ip
